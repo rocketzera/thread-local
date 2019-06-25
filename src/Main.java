@@ -1,13 +1,9 @@
-import java.time.LocalDateTime;
-import java.util.Calendar;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public  class Main {
+public class Main {
 
-    private static Executor threadPool = Executors.newFixedThreadPool(10000);
-
-    private Long nome;
+    private static Executor threadPool = Executors.newFixedThreadPool(1000);
 
     public static ThreadLocal<Long> df = new ThreadLocal<>();
 
@@ -15,30 +11,31 @@ public  class Main {
 
         Main main = new Main();
 
-        for (long i = 0; i < 10000; i++) {
+        for (long i = 0; i < 100000; i++) {
             long id = i;
+
             threadPool.execute(() -> {
-                System.out.print("Inicio: " + id + " ");
 
-                main.setNome(id);
+                main.setDf(id);
+                Long dfRetorno = main.getDf();
 
-                System.out.print(main.getNome() + " Fim");
-                System.out.println(id != main.getNome()? " True": " ");
+                if(id != dfRetorno){
+                    System.out.printf("%s %s efeito colateral\n", id, dfRetorno);
+                }
+
             });
         }
 
         Thread.sleep(1000l);
 
-
+        System.out.printf("fim ");
     }
 
-    public void setNome(Long nome) {
-        df.set(nome);
-//        this.nome = nome;
+    public synchronized Long getDf() {
+        return df.get();
     }
 
-    public Long getNome() {
-       return df.get();
-//        return nome;
+    public synchronized void setDf(Long df) {
+        this.df.set(df);
     }
 }
