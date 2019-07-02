@@ -5,11 +5,11 @@ public class Exemplo1 {
         for (long i = 0; i < 100000; i++) {
             long codigo = i;
 
-            Parametro parametro = new Parametro();
+            Servico servico = new Servico();
 
             new Thread(() -> {
-                parametro.setCodigo(codigo);
-                Long codigoRetorno = parametro.getCodigo();
+                servico.salvar(codigo);
+                Long codigoRetorno = servico.buscar();
 
                 if (codigo != codigoRetorno)
                     System.out.printf("%s %s efeito colateral\n", codigo, codigoRetorno);
@@ -20,16 +20,18 @@ public class Exemplo1 {
         Thread.sleep(1000l);
     }
 
+    public static class Servico {
+
+        public Long buscar() {
+            return Parametro.codigo;
+        }
+
+        public void salvar(Long codigo) {
+            Parametro.codigo = codigo;
+        }
+    }
+
     public static class Parametro {
-        
-        public Long codigo;
-
-        public Long getCodigo() {
-            return codigo;
-        }
-
-        public void setCodigo(Long codigo) {
-            this.codigo = codigo;
-        }
+        public static Long codigo;
     }
 }
