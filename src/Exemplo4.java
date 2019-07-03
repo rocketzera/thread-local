@@ -1,10 +1,7 @@
-import java.util.concurrent.ConcurrentHashMap;
 
-public class Exemplo3 {
+public class Exemplo4 {
 
-    public static ConcurrentHashMap<Long, Parametro> concurrentHashMap = new ConcurrentHashMap();
-
-    public static Parametro parametros;
+    public static ThreadLocal<Parametro> parametros = new ThreadLocal<>();
 
     public static void main(String[] args) {
 
@@ -15,7 +12,7 @@ public class Exemplo3 {
 
             new Thread(() -> {
                 servico.salvar(codigo);
-                Long codigoRetorno = servico.buscar(codigo);
+                Long codigoRetorno = servico.buscar();
 
                 if (codigo != codigoRetorno)
                     System.out.printf("%s %s efeito colateral\n", codigo, codigoRetorno);
@@ -27,11 +24,11 @@ public class Exemplo3 {
     public static class Servico {
 
         public void salvar(Long codigo) {
-            concurrentHashMap.put(codigo, new Parametro(codigo));
+            parametros.set(new Parametro(codigo));
         }
 
-        public Long buscar(Long codigo) {
-            return concurrentHashMap.get(codigo).getCodigo();
+        public Long buscar() {
+            return parametros.get().getCodigo();
         }
     }
 }

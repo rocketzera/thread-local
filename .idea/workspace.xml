@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="392b77d5-2080-4d61-896c-ed92efc6cf26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Parametro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exemplo4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo1$Parametro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo1$Servico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo1$Servico.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo2$Parametro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo2$Servico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo2$Servico.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo3$Parametro.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo3$Servico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo3$Servico.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/threadlocal-core/Exemplo3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exemplo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exemplo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exemplo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exemplo2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exemplo3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exemplo3.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Exemplo1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#609#610#0" expanded="true" />
                 <element signature="e#666#667#0" expanded="true" />
@@ -44,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Exemplo2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="45">
+              <caret line="3" column="39" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="39" />
               <folding>
                 <element signature="e#608#609#0" expanded="true" />
                 <element signature="e#666#667#0" expanded="true" />
@@ -59,8 +50,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Exemplo3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state>
+              <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+              <folding>
+                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+                <element signature="e#940#941#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Exemplo4.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
               <folding>
                 <element signature="e#643#644#0" expanded="true" />
                 <element signature="e#704#705#0" expanded="true" />
@@ -73,14 +79,7 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Parametro.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#100#101#0" expanded="true" />
-                <element signature="e#144#145#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -118,8 +117,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,11 +133,18 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562178773975" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562183779356" />
     <property name="full.screen.before.presentation.mode" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -154,7 +158,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Exemplo2">
+  <component name="RunManager" selected="Application.Exemplo3">
     <configuration name="Exemplo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exemplo1" />
       <module name="threadlocal-core" />
@@ -176,6 +180,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Exemplo4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exemplo4" />
+      <module name="threadlocal-core" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="threadlocal-core" />
@@ -185,9 +196,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Exemplo2" />
-        <item itemvalue="Application.Exemplo1" />
         <item itemvalue="Application.Exemplo3" />
+        <item itemvalue="Application.Exemplo2" />
+        <item itemvalue="Application.Exemplo4" />
+        <item itemvalue="Application.Exemplo1" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -209,7 +221,7 @@
     <frame x="55" y="25" width="1865" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21715228" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21935129" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -218,7 +230,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23542117" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31425485" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -275,19 +287,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/Parametro.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exemplo4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="240">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding>
-            <element signature="e#100#101#0" expanded="true" />
-            <element signature="e#144#145#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#795#796#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Exemplo1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#609#610#0" expanded="true" />
             <element signature="e#666#667#0" expanded="true" />
@@ -299,8 +317,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Exemplo2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="45">
+          <caret line="3" column="39" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="39" />
           <folding>
             <element signature="e#608#609#0" expanded="true" />
             <element signature="e#666#667#0" expanded="true" />
@@ -312,13 +330,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Exemplo3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state>
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
           <folding>
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
           </folding>
         </state>
       </provider>
