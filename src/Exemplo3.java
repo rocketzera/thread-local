@@ -1,8 +1,9 @@
-import java.time.LocalDateTime;
 
 public class Exemplo3 {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static ThreadLocal<Parametro> parametros = new ThreadLocal<>();
+
+    public static void main(String[] args) {
 
         Servico servico = new Servico();
 
@@ -18,22 +19,16 @@ public class Exemplo3 {
 
             }).start();
         }
-
-        Thread.sleep(1000l);
     }
 
     public static class Servico {
 
-        public Long buscar() {
-            return Parametro.codigo.get();
-        }
-
         public void salvar(Long codigo) {
-            Parametro.codigo.set(codigo);
+            parametros.set(new Parametro(codigo));
         }
-    }
 
-    public static class Parametro {
-        public static ThreadLocal<Long> codigo = new ThreadLocal<>();
+        public Long buscar() {
+            return parametros.get().getCodigo();
+        }
     }
 }

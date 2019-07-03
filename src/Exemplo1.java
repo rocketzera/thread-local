@@ -1,7 +1,7 @@
 
 public class Exemplo1 {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
         for (long i = 0; i < 100000; i++) {
             long codigo = i;
@@ -17,22 +17,18 @@ public class Exemplo1 {
 
             }).start();
         }
-
-        Thread.sleep(1000l);
     }
 
     public static class Servico {
 
-        public Long buscar() {
-            return Parametro.codigo;
-        }
+        private Parametro parametro;
 
         public void salvar(Long codigo) {
-            Parametro.codigo = codigo;
+            parametro = new Parametro(codigo);
         }
-    }
 
-    public static class Parametro {
-        public static Long codigo;
+        public Long buscar() {
+            return parametro.getCodigo();
+        }
     }
 }
