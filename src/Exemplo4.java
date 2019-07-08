@@ -12,10 +12,6 @@ public class Exemplo4 {
 
             new Thread(() -> {
                 servico.salvar(codigo);
-                Long codigoRetorno = servico.buscar();
-
-                if (codigo != codigoRetorno)
-                    System.out.printf("%s %s efeito colateral\n", codigo, codigoRetorno);
 
             }).start();
         }
@@ -25,10 +21,10 @@ public class Exemplo4 {
 
         public void salvar(Long codigo) {
             parametros.set(new Parametro(codigo));
+            Long codigoRetorno = parametros.get().getCodigo();
+            if (codigo != codigoRetorno)
+                System.out.printf("%s %s efeito colateral\n", codigo, codigoRetorno);
         }
 
-        public Long buscar() {
-            return parametros.get().getCodigo();
-        }
     }
 }

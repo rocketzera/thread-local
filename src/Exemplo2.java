@@ -1,7 +1,8 @@
+import java.util.HashMap;
 
 public class Exemplo2 {
 
-    public static Parametro parametros;
+    public static HashMap<Long, Parametro> concurrentHashMap = new HashMap();
 
     public static void main(String[] args) {
 
@@ -12,10 +13,6 @@ public class Exemplo2 {
 
             new Thread(() -> {
                 servico.salvar(codigo);
-                Long codigoRetorno = servico.buscar();
-
-                if (codigo != codigoRetorno)
-                    System.out.printf("%s %s efeito colateral\n", codigo, codigoRetorno);
 
             }).start();
         }
@@ -24,11 +21,11 @@ public class Exemplo2 {
     public static class Servico {
 
         public void salvar(Long codigo) {
-            parametros = new Parametro(codigo);
-        }
+            concurrentHashMap.put(codigo, new Parametro(codigo));
+            Long codigoRetorno = concurrentHashMap.get(codigo).getCodigo();
 
-        public Long buscar() {
-            return parametros.getCodigo();
+            if (codigo != codigoRetorno)
+                System.out.printf("%s %s efeito colateral\n", codigo, codigoRetorno);
         }
     }
 }
