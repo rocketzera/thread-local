@@ -1,7 +1,10 @@
+import java.util.HashMap;
 
 public class Exemplo2 {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static HashMap<Long, Parametro> concurrentHashMap = new HashMap();
+
+    public static void main(String[] args) {
 
         Servico servico = new Servico();
 
@@ -10,29 +13,19 @@ public class Exemplo2 {
 
             new Thread(() -> {
                 servico.salvar(codigo);
-                Long codigoRetorno = servico.buscar();
-
-                if (codigo != codigoRetorno)
-                    System.out.printf("%s %s efeito colateral\n", codigo, codigoRetorno);
 
             }).start();
         }
-
-        Thread.sleep(1000l);
     }
 
     public static class Servico {
 
-        public Long buscar() {
-            return Parametro.codigo;
-        }
-
         public void salvar(Long codigo) {
-            Parametro.codigo = codigo;
-        }
-    }
+            concurrentHashMap.put(codigo, new Parametro(codigo));
+            Long codigoRetorno = concurrentHashMap.get(codigo).getCodigo();
 
-    public static class Parametro {
-        public static Long codigo;
+            if (codigo != codigoRetorno)
+                System.out.printf("%s %s efeito colateral\n", codigo, codigoRetorno);
+        }
     }
 }
