@@ -6,13 +6,17 @@ public class Exemplo2 {
 
     public static void main(String[] args) {
 
-        Servico servico = new Servico();
-
         for (long i = 0; i < 100000; i++) {
-            long codigo = i;
+            long chave = i;
+
+            Servico servico = new Servico();
 
             new Thread(() -> {
-                servico.salvar(codigo);
+                servico.salvar(chave);
+                Long chaveRetorno = servico.buscar(chave);
+
+                if (chave != chaveRetorno)
+                    System.out.printf("%s %s efeito colateral\n", chave, chaveRetorno);
 
             }).start();
         }
@@ -22,10 +26,10 @@ public class Exemplo2 {
 
         public void salvar(Long codigo) {
             concurrentHashMap.put(codigo, new Parametro(codigo));
-            Long codigoRetorno = concurrentHashMap.get(codigo).getCodigo();
+        }
 
-            if (codigo != codigoRetorno)
-                System.out.printf("%s %s efeito colateral\n", codigo, codigoRetorno);
+        public Long buscar(Long codigo) {
+            return concurrentHashMap.get(codigo).getCodigo();
         }
     }
 }

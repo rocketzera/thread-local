@@ -1,18 +1,21 @@
-import java.util.HashMap;
 
 public class Exemplo1 {
 
-    public static HashMap<Long, Parametro> concurrentHashMap = new HashMap();
+    public static  Parametro parametro;
 
     public static void main(String[] args) {
 
         for (long i = 0; i < 100000; i++) {
-            long codigo = i;
+            long chave = i;
 
             Servico servico = new Servico();
 
             new Thread(() -> {
-                servico.salvar(codigo);
+                servico.salvar(chave);
+                Long chaveRetorno = servico.buscar();
+
+                if (chave != chaveRetorno)
+                    System.out.printf("%s %s efeito colateral\n", chave, chaveRetorno);
 
             }).start();
         }
@@ -21,11 +24,11 @@ public class Exemplo1 {
     public static class Servico {
 
         public void salvar(Long codigo) {
-            concurrentHashMap.put(codigo, new Parametro(codigo));
-            Long codigoRetorno = concurrentHashMap.get(codigo).getCodigo();
+            parametro = new Parametro(codigo);
+        }
 
-            if (codigo != codigoRetorno)
-                System.out.printf("%s %s efeito colateral\n", codigo, codigoRetorno);
+        public Long buscar() {
+            return parametro.getCodigo();
         }
     }
 }
